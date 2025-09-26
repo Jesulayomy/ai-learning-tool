@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
-import { Toggle } from "@/components/ui/toggle";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
   Select,
@@ -51,7 +50,6 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
-import { Badge as _Badge } from "@/components/ui/badge";
 import {
   InputOTP,
   InputOTPGroup,
@@ -79,18 +77,6 @@ import {
   DrawerClose,
   DrawerFooter
 } from "@/components/ui/drawer";
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
-import {
-  AlertDialog,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogCancel,
-  AlertDialogAction,
-  AlertDialogFooter
-} from "@/components/ui/alert-dialog";
 import {
   Carousel,
   CarouselContent,
@@ -111,11 +97,7 @@ import {
   CommandItem,
   CommandEmpty
 } from "@/components/ui/command";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent
-} from "@/components/ui/chart";
+import { ChartContainer } from "@/components/ui/chart";
 import {
   LineChart,
   Line,
@@ -128,7 +110,6 @@ import { useRouter } from "next/navigation";
 
 export default function UiDocsPage() {
   const [inputVal, setInputVal] = useState("");
-  const [selected, setSelected] = useState<string | undefined>(undefined);
   const [sliderValue, setSliderValue] = useState([30]);
   const router = useRouter();
 
@@ -534,7 +515,9 @@ export default function UiDocsPage() {
               This page covers the smaller components. For higher-level
               patterns, check the components page.
             </p>
-            <Button onClick={() => router.push("/components")}>Components</Button>
+            <Button onClick={() => router.push("/components")}>
+              Components
+            </Button>
           </section>
         </main>
       </div>
